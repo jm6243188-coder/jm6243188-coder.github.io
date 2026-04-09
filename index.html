@@ -1,107 +1,111 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <title>Meu Site Profissional</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0f172a;
-      color: white;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Barbearia Style</title>
 
-    header {
-      padding: 60px 20px;
-      text-align: center;
-      background: linear-gradient(135deg, #3b82f6, #9333ea);
-    }
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: white;
+  background: url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438') no-repeat center/cover;
+}
 
-    header h1 {
-      margin: 0;
-      font-size: 40px;
-    }
+.overlay {
+  background: rgba(0,0,0,0.7);
+  min-height: 100vh;
+}
 
-    header p {
-      font-size: 18px;
-      opacity: 0.9;
-    }
+header {
+  text-align: center;
+  padding: 60px 20px;
+}
 
-    .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 25px;
-      background: white;
-      color: black;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-    }
+header h1 {
+  font-size: 40px;
+}
 
-    section {
-      padding: 50px 20px;
-      text-align: center;
-    }
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: #facc15;
+  color: black;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
 
-    .cards {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
+section {
+  padding: 40px 20px;
+  text-align: center;
+}
 
-    .card {
-      background: #1e293b;
-      padding: 20px;
-      border-radius: 10px;
-      width: 250px;
-    }
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #020617;
-      font-size: 14px;
-      opacity: 0.7;
-    }
-  </style>
+.galeria img {
+  width: 250px;
+  border-radius: 10px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: black;
+}
+</style>
+
 </head>
 <body>
 
+<div class="overlay">
+
 <header>
-  <h1>Seu Nome Aqui</h1>
-  <p>Automação | Sites | Soluções digitais</p>
-  <a class="btn" href="https://wa.me/SEUNUMERO">Falar comigo no WhatsApp</a>
+  <h1>Barbearia Style</h1>
+  <p>Corte moderno | Barba | Atendimento top</p>
+  <a class="btn" href="https://wa.me/5599999999999">Agendar pelo WhatsApp</a>
 </header>
 
 <section>
-  <h2>O que eu faço</h2>
-  <div class="cards">
-    <div class="card">
-      <h3>Automação</h3>
-      <p>Automatizo tarefas para economizar tempo e dinheiro.</p>
-    </div>
-    <div class="card">
-      <h3>Criação de Sites</h3>
-      <p>Sites simples e profissionais para negócios.</p>
-    </div>
-    <div class="card">
-      <h3>Integrações</h3>
-      <p>Conecto sistemas e APIs automaticamente.</p>
-    </div>
+  <h2>Sobre nós</h2>
+  <p>Especialistas em cortes modernos e barba. Atendimento rápido e de qualidade.</p>
+</section>
+
+<section>
+  <h2>Galeria</h2>
+  <div class="galeria">
+    <img src="https://images.unsplash.com/photo-1512690459411-b9245aed614b">
+    <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70">
+    <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a">
   </div>
 </section>
 
 <section>
-  <h2>Entre em contato</h2>
-  <p>Clique no botão abaixo e fale comigo direto no WhatsApp.</p>
-  <a class="btn" href="https://wa.me/SEUNUMERO">Chamar no WhatsApp</a>
+  <h2>Localização</h2>
+  <p>Rua Exemplo, 123 - Sua Cidade</p>
+  <iframe 
+    src="https://www.google.com/maps?q=São+Paulo&output=embed"
+    width="90%" height="250" style="border:0; border-radius:10px;">
+  </iframe>
+</section>
+
+<section>
+  <h2>Contato</h2>
+  <a class="btn" href="https://wa.me/5599999999999">Falar no WhatsApp</a>
 </section>
 
 <footer>
-  © 2026 - Seu Nome
+  © 2026 Barbearia Style
 </footer>
+
+</div>
 
 </body>
 </html>
