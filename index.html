@@ -11,125 +11,65 @@ body {
   font-family: 'Segoe UI', sans-serif;
   background: #0a0a0a;
   color: white;
-  overflow-x: hidden;
-}
-
-/* ANIMAÇÃO DE ENTRADA */
-.fade {
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeUp 1s forwards;
-}
-
-@keyframes fadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  text-align: center;
 }
 
 /* HEADER */
 header {
-  height: 100vh;
-  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)),
-  url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438');
-  background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 40px 20px;
+  background: linear-gradient(45deg, #000, #1a1a1a);
 }
 
-.logo {
-  font-size: 48px;
-  font-weight: bold;
-  letter-spacing: 3px;
-  background: linear-gradient(45deg, #00ff88, #00c853);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
 }
 
-/* BOTÃO */
-.btn {
+p {
+  color: #ccc;
+}
+
+/* BOTÃO PRINCIPAL */
+.btn-main {
+  display: inline-block;
   margin-top: 20px;
-  padding: 14px 28px;
+  padding: 15px 30px;
+  background: #25d366;
+  color: white;
   border-radius: 30px;
-  background: linear-gradient(45deg, #00c853, #00ff88);
-  border: none;
-  color: black;
   font-weight: bold;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* HORÁRIOS */
+.horarios {
+  padding: 30px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  max-width: 400px;
+  margin: auto;
+}
+
+.horario {
+  background: #1c1c1c;
+  padding: 15px;
+  border-radius: 10px;
   cursor: pointer;
   transition: 0.3s;
 }
 
-.btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px #00ff88;
-}
-
-/* SEÇÕES */
-section {
-  padding: 60px 20px;
-  text-align: center;
-}
-
-h2 {
-  margin-bottom: 20px;
-}
-
-/* GALERIA */
-.galeria {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-}
-
-.galeria img {
-  width: 260px;
-  border-radius: 10px;
-  transition: 0.3s;
-}
-
-.galeria img:hover {
-  transform: scale(1.05);
-}
-
-/* REDES */
-.redes a {
-  margin: 10px;
-  padding: 12px 20px;
-  background: #1c1c1c;
-  border-radius: 30px;
-  text-decoration: none;
-  color: white;
-  transition: 0.3s;
-}
-
-.redes a:hover {
-  background: #00c853;
-}
-
-/* MAPA */
-iframe {
-  border-radius: 10px;
-}
-
-/* WHATSAPP FIXO */
-.whatsapp {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
+.horario:hover {
   background: #25d366;
-  padding: 16px;
-  border-radius: 50%;
-  font-size: 22px;
-  text-decoration: none;
-  color: white;
-  box-shadow: 0 0 15px #25d366;
 }
 
-/* FOOTER */
+/* RODAPÉ */
 footer {
+  margin-top: 40px;
   padding: 20px;
   background: #000;
 }
@@ -139,60 +79,40 @@ footer {
 <body>
 
 <header>
-  <div class="fade">
-    <div class="logo">BARBER ELITE</div>
-    <p>Estilo • Precisão • Qualidade</p>
-    <a href="https://wa.me/554195179344">
-      <button class="btn">Agendar no WhatsApp</button>
-    </a>
-  </div>
+  <h1>💈 Barbearia Elite</h1>
+  <p>Escolha um horário e agende rápido</p>
+
+  <a class="btn-main" href="https://wa.me/554195179344">
+    Falar no WhatsApp
+  </a>
 </header>
 
-<section class="fade">
-  <h2>Sobre nós</h2>
-  <p>
-    Especialistas em cortes modernos e barba, entregando estilo e confiança.
-    Atendimento premium em um ambiente confortável e profissional.
-  </p>
-</section>
+<section class="horarios">
+  <h2>Escolha um horário</h2>
 
-<section class="fade">
-  <h2>Galeria</h2>
-  <div class="galeria">
-    <img src="https://images.unsplash.com/photo-1512690459411-b9245aed614b">
-    <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70">
-    <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a">
+  <div class="grid">
+
+    <div class="horario" onclick="agendar('09:00')">09:00</div>
+    <div class="horario" onclick="agendar('10:00')">10:00</div>
+    <div class="horario" onclick="agendar('11:00')">11:00</div>
+    <div class="horario" onclick="agendar('14:00')">14:00</div>
+    <div class="horario" onclick="agendar('15:00')">15:00</div>
+    <div class="horario" onclick="agendar('16:00')">16:00</div>
+
   </div>
-</section>
-
-<section class="fade">
-  <h2>Redes sociais</h2>
-  <div class="redes">
-    <a href="#">Instagram</a>
-    <a href="#">Facebook</a>
-  </div>
-</section>
-
-<section class="fade">
-  <h2>Localização</h2>
-  <p>Curitiba - PR</p>
-  <iframe 
-    src="https://www.google.com/maps?q=Curitiba&output=embed"
-    width="90%" height="250">
-  </iframe>
-</section>
-
-<section class="fade">
-  <h2>Horário</h2>
-  <p>Seg a Sex: 09:00 - 19:00</p>
-  <p>Sábado: 09:00 - 17:00</p>
 </section>
 
 <footer>
-  © 2026 Barber Elite
+  Atendimento rápido via WhatsApp
 </footer>
 
-<a class="whatsapp" href="https://wa.me/554195179344">💬</a>
+<script>
+function agendar(horario) {
+  const msg = `Olá, quero agendar um corte às ${horario} 💈 Está disponível?`;
+  const url = `https://wa.me/554195179344?text=${encodeURIComponent(msg)}`;
+  window.open(url, "_blank");
+}
+</script>
 
 </body>
 </html>
