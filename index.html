@@ -1,110 +1,62 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Barbearia Style</title>
-
-<style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  color: white;
-  background: url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438') no-repeat center/cover;
-}
-
-.overlay {
-  background: rgba(0,0,0,0.7);
-  min-height: 100vh;
-}
-
-header {
-  text-align: center;
-  padding: 60px 20px;
-}
-
-header h1 {
-  font-size: 40px;
-}
-
-.btn {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 12px 25px;
-  background: #facc15;
-  color: black;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-section {
-  padding: 40px 20px;
-  text-align: center;
-}
-
-.galeria {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
-}
-
-.galeria img {
-  width: 250px;
-  border-radius: 10px;
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  background: black;
-}
-</style>
-
+  <meta charset="UTF-8">
+  <title>Agendamento Barbearia</title>
+  <style>
+    body {
+      font-family: Arial;
+      background: #111;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .box {
+      background: #222;
+      padding: 30px;
+      border-radius: 10px;
+      width: 300px;
+      text-align: center;
+    }
+    input, select, button {
+      width: 100%;
+      margin: 10px 0;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+    }
+    button {
+      background: #00c853;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
 
-<div class="overlay">
+<div class="box">
+  <h2>Agendar Horário</h2>
 
-<header>
-  <h1>Barbearia Style</h1>
-  <p>Corte moderno | Barba | Atendimento top</p>
-  <a class="btn" href="https://wa.me/554195179344">Agendar pelo WhatsApp</a>
-</header>
+  <form action="https://hook.us2.make.com/79uy1f6bk57kziqm5ka5qbr3wqnne8bk" method="GET">
+    
+    <input type="text" name="nome" placeholder="Seu nome" required>
 
-<section>
-  <h2>Sobre nós</h2>
-  <p>Especialistas em cortes modernos e barba. Atendimento rápido e de qualidade.</p>
-</section>
+    <select name="horario" required>
+      <option value="">Escolha um horário</option>
+      <option>09:00</option>
+      <option>10:00</option>
+      <option>11:00</option>
+      <option>14:00</option>
+      <option>15:00</option>
+      <option>16:00</option>
+    </select>
 
-<section>
-  <h2>Galeria</h2>
-  <div class="galeria">
-    <img src="https://images.unsplash.com/photo-1512690459411-b9245aed614b">
-    <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70">
-    <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a">
-  </div>
-</section>
+    <button type="submit">Agendar</button>
 
-<section>
-  <h2>Localização</h2>
-  <p>Rua Exemplo, 123 - Sua Cidade</p>
-  <iframe 
-    src="https://www.google.com/maps?q=Curitiba&output=embed"
-    width="90%" height="250" style="border:0; border-radius:10px;">
-  </iframe>
-</section>
-
-<section>
-  <h2>Contato</h2>
-  <a class="btn" href="https://wa.me/554195179344">Falar no WhatsApp</a>
-</section>
-
-<footer>
-  © 2026 Barbearia Style
-</footer>
-
+  </form>
 </div>
 
 </body>
