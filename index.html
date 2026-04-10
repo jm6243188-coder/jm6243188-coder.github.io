@@ -22,14 +22,13 @@ header {
 
 h1 {
   font-size: 36px;
-  margin-bottom: 10px;
 }
 
 p {
   color: #ccc;
 }
 
-/* BOTÃO PRINCIPAL */
+/* BOTÃO WHATS */
 .btn-main {
   display: inline-block;
   margin-top: 20px;
@@ -67,7 +66,54 @@ p {
   background: #25d366;
 }
 
-/* RODAPÉ */
+/* GALERIA */
+.galeria {
+  padding: 20px;
+}
+
+.galeria img {
+  width: 90%;
+  max-width: 300px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+/* REDES */
+.redes {
+  margin-top: 20px;
+}
+
+.instagram {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 25px;
+  border-radius: 30px;
+  background: linear-gradient(45deg, #fd1d1d, #833ab4);
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.facebook {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 25px;
+  border-radius: 30px;
+  background: #1877f2;
+  color: white;
+  text-decoration: none;
+}
+
+/* LOCALIZAÇÃO */
+.mapa {
+  margin-top: 20px;
+}
+
+iframe {
+  border-radius: 10px;
+}
+
+/* FOOTER */
 footer {
   margin-top: 40px;
   padding: 20px;
@@ -80,7 +126,7 @@ footer {
 
 <header>
   <h1>💈 Barbearia Elite</h1>
-  <p>Escolha um horário e agende rápido</p>
+  <p>Agende rápido pelo WhatsApp</p>
 
   <a class="btn-main" href="https://wa.me/554195179344">
     Falar no WhatsApp
@@ -91,15 +137,36 @@ footer {
   <h2>Escolha um horário</h2>
 
   <div class="grid">
-
     <div class="horario" onclick="agendar('09:00')">09:00</div>
     <div class="horario" onclick="agendar('10:00')">10:00</div>
     <div class="horario" onclick="agendar('11:00')">11:00</div>
     <div class="horario" onclick="agendar('14:00')">14:00</div>
     <div class="horario" onclick="agendar('15:00')">15:00</div>
     <div class="horario" onclick="agendar('16:00')">16:00</div>
-
   </div>
+</section>
+
+<section class="galeria">
+  <h2>Alguns cortes</h2>
+
+  <img src="https://images.unsplash.com/photo-1512690459411-b9245aed614b">
+  <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70">
+  <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a">
+</section>
+
+<section class="redes">
+  <h2>Redes sociais</h2>
+
+  <a class="instagram" href="#">Ver no Instagram</a>
+  <a class="facebook" href="#">Facebook</a>
+</section>
+
+<section class="mapa">
+  <h2>Localização</h2>
+  <iframe 
+    src="https://www.google.com/maps?q=Curitiba&output=embed"
+    width="90%" height="250">
+  </iframe>
 </section>
 
 <footer>
