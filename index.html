@@ -3,88 +3,135 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Barbearia Premium</title>
+<title>Barbearia Elite</title>
 
 <style>
 body {
   margin: 0;
-  font-family: Arial;
-  background: #111;
+  font-family: 'Segoe UI', sans-serif;
+  background: #0a0a0a;
   color: white;
+  overflow-x: hidden;
 }
 
+/* ANIMAÇÃO DE ENTRADA */
+.fade {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1s forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* HEADER */
 header {
-  background: url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438') no-repeat center/cover;
   height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)),
+  url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438');
+  background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.overlay {
-  background: rgba(0,0,0,0.7);
-  padding: 40px;
-  text-align: center;
-  border-radius: 10px;
-}
-
-h1 {
-  font-size: 42px;
-}
-
-.btn {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 12px 25px;
-  background: #25d366;
-  color: white;
-  text-decoration: none;
-  border-radius: 8px;
+.logo {
+  font-size: 48px;
   font-weight: bold;
+  letter-spacing: 3px;
+  background: linear-gradient(45deg, #00ff88, #00c853);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
+/* BOTÃO */
+.btn {
+  margin-top: 20px;
+  padding: 14px 28px;
+  border-radius: 30px;
+  background: linear-gradient(45deg, #00c853, #00ff88);
+  border: none;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #00ff88;
+}
+
+/* SEÇÕES */
 section {
-  padding: 50px 20px;
+  padding: 60px 20px;
   text-align: center;
 }
 
+h2 {
+  margin-bottom: 20px;
+}
+
+/* GALERIA */
 .galeria {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 10px;
+  gap: 15px;
 }
 
 .galeria img {
-  width: 250px;
+  width: 260px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.galeria img:hover {
+  transform: scale(1.05);
+}
+
+/* REDES */
+.redes a {
+  margin: 10px;
+  padding: 12px 20px;
+  background: #1c1c1c;
+  border-radius: 30px;
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+}
+
+.redes a:hover {
+  background: #00c853;
+}
+
+/* MAPA */
+iframe {
   border-radius: 10px;
 }
 
-.redes a {
-  display: inline-block;
-  margin: 10px;
-  padding: 10px 15px;
-  background: #222;
-  border-radius: 8px;
-  color: white;
-  text-decoration: none;
-}
-
-footer {
-  background: black;
-  padding: 20px;
-}
-
-.whatsapp-float {
+/* WHATSAPP FIXO */
+.whatsapp {
   position: fixed;
   bottom: 20px;
   right: 20px;
   background: #25d366;
-  padding: 15px;
+  padding: 16px;
   border-radius: 50%;
-  font-size: 20px;
+  font-size: 22px;
   text-decoration: none;
   color: white;
+  box-shadow: 0 0 15px #25d366;
+}
+
+/* FOOTER */
+footer {
+  padding: 20px;
+  background: #000;
 }
 </style>
 </head>
@@ -92,23 +139,24 @@ footer {
 <body>
 
 <header>
-  <div class="overlay">
-    <h1>Barbearia Premium</h1>
-    <p>Corte moderno • Barba • Estilo</p>
-    <a class="btn" href="https://wa.me/554195179344">Agendar no WhatsApp</a>
+  <div class="fade">
+    <div class="logo">BARBER ELITE</div>
+    <p>Estilo • Precisão • Qualidade</p>
+    <a href="https://wa.me/554195179344">
+      <button class="btn">Agendar no WhatsApp</button>
+    </a>
   </div>
 </header>
 
-<section>
+<section class="fade">
   <h2>Sobre nós</h2>
   <p>
-    Somos especialistas em cortes modernos e barba, oferecendo atendimento de alta qualidade
-    e um ambiente confortável. Nosso objetivo é proporcionar estilo, confiança e satisfação
-    a cada cliente.
+    Especialistas em cortes modernos e barba, entregando estilo e confiança.
+    Atendimento premium em um ambiente confortável e profissional.
   </p>
 </section>
 
-<section>
+<section class="fade">
   <h2>Galeria</h2>
   <div class="galeria">
     <img src="https://images.unsplash.com/photo-1512690459411-b9245aed614b">
@@ -117,7 +165,7 @@ footer {
   </div>
 </section>
 
-<section>
+<section class="fade">
   <h2>Redes sociais</h2>
   <div class="redes">
     <a href="#">Instagram</a>
@@ -125,26 +173,26 @@ footer {
   </div>
 </section>
 
-<section>
+<section class="fade">
   <h2>Localização</h2>
   <p>Curitiba - PR</p>
   <iframe 
     src="https://www.google.com/maps?q=Curitiba&output=embed"
-    width="90%" height="250" style="border:0; border-radius:10px;">
+    width="90%" height="250">
   </iframe>
 </section>
 
-<section>
-  <h2>Horário de funcionamento</h2>
+<section class="fade">
+  <h2>Horário</h2>
   <p>Seg a Sex: 09:00 - 19:00</p>
   <p>Sábado: 09:00 - 17:00</p>
 </section>
 
 <footer>
-  © 2026 Barbearia Premium
+  © 2026 Barber Elite
 </footer>
 
-<a class="whatsapp-float" href="https://wa.me/554195179344">💬</a>
+<a class="whatsapp" href="https://wa.me/554195179344">💬</a>
 
 </body>
 </html>
