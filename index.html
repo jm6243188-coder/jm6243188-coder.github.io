@@ -1,63 +1,128 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <title>Agendamento Barbearia</title>
-  <style>
-    body {
-      font-family: Arial;
-      background: #111;
-      color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-    .box {
-      background: #222;
-      padding: 30px;
-      border-radius: 10px;
-      width: 300px;
-      text-align: center;
-    }
-    input, select, button {
-      width: 100%;
-      margin: 10px 0;
-      padding: 10px;
-      border: none;
-      border-radius: 5px;
-    }
-    button {
-      background: #00c853;
-      color: white;
-      font-weight: bold;
-      cursor: pointer;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Barbearia Premium</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #111;
+  color: white;
+}
+
+header {
+  background: url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438') no-repeat center/cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  background: rgba(0,0,0,0.7);
+  padding: 40px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: #25d366;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.galeria img {
+  width: 250px;
+  border-radius: 10px;
+}
+
+footer {
+  background: black;
+  padding: 20px;
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25d366;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+}
+</style>
 </head>
+
 <body>
 
-<div class="box">
-  <h2>Agendar Horário</h2>
+<header>
+  <div class="overlay">
+    <h1>Barbearia Premium</h1>
+    <p>Cortes modernos | Barba | Estilo</p>
+    <a class="btn" href="https://wa.me/554195179344">Agendar no WhatsApp</a>
+  </div>
+</header>
 
-  <form action="https://hook.us2.make.com/79uy1f6bk57kziqm5ka5qbr3wqnne8bk" method="GET">
-    
-    <input type="text" name="nome" placeholder="Seu nome" required>
+<section>
+  <h2>Sobre nós</h2>
+  <p>Especialistas em cortes modernos, atendimento rápido e qualidade garantida.</p>
+</section>
 
-    <select name="horario" required>
-      <option value="">Escolha um horário</option>
-      <option>09:00</option>
-      <option>10:00</option>
-      <option>11:00</option>
-      <option>14:00</option>
-      <option>15:00</option>
-      <option>16:00</option>
-    </select>
+<section>
+  <h2>Galeria</h2>
+  <div class="galeria">
+    <img src="https://images.unsplash.com/photo-1512690459411-b9245aed614b">
+    <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70">
+    <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a">
+  </div>
+</section>
 
-    <button type="submit">Agendar</button>
+<section>
+  <h2>Localização</h2>
+  <p>Rua Exemplo, 123</p>
+  <iframe 
+    src="https://www.google.com/maps?q=Maringá&output=embed"
+    width="90%" height="250" style="border:0; border-radius:10px;">
+  </iframe>
+</section>
 
-  </form>
-</div>
+<section>
+  <h2>Horário de funcionamento</h2>
+  <p>Seg a Sex: 09:00 - 19:00</p>
+  <p>Sábado: 09:00 - 17:00</p>
+</section>
+
+<footer>
+  © 2026 Barbearia Premium
+</footer>
+
+<a class="whatsapp-float" href="https://wa.me/554195179344">💬</a>
 
 </body>
 </html>
